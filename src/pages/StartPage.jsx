@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function StartPage() {
   return (
-    <div>
+    <main>
       <h2>Welcome to the Amiibo Shop</h2>
-    </div>
+    </main>
   )
 }

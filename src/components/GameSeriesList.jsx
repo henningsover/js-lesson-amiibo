@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import GameSeriesCard from './GameSeriesCard'
 
-
 export default function AmiiboList() {
 
   let [gameSeries, setGameSeries] = useState([])
@@ -59,12 +58,10 @@ export default function AmiiboList() {
             <GameSeriesCard
               gameSeries={element.name}
               image={element.image}
+              id={index}
               key={index} />
           )
         })
-      }
-      {
-        // console.log(gameSeries)
       }
     </div>
   )

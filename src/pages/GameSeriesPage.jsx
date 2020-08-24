@@ -3,8 +3,8 @@ import GameSeriesList from '../components/GameSeriesList'
 
 export default function GameSeriesPage() {
   return (
-    <div>
+    <main>
       <GameSeriesList />
-    </div>
+    </main>
   )
 }

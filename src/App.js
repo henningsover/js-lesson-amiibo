@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import StartPage from './pages/StartPage';
 import GameSeriesPage from './pages/GameSeriesPage';
 import AmiiboList from './components/AmiiboList';
+import AmiiboDetailsPage from './pages/AmiiboDetailsPage';
 
 function App() {
   return (
@@ -12,10 +13,18 @@ function App() {
       <Switch>
 
         <Route path='/game-series/:gameseries' render={props => {
-          console.log(props)
           return (
             <Layout>
               <AmiiboList {...props} />
+            </Layout>
+          )
+        }}>
+        </Route>
+
+        <Route path='/amiibo-details/:id' render={props => {
+          return (
+            <Layout>
+              <AmiiboDetailsPage {...props} />
             </Layout>
           )
         }}>

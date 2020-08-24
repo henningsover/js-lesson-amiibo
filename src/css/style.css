@@ -1,8 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #e70011;
+  border-bottom: 2px solid #9e020c;
+  text-align: center;
+  height: 6em;
+}
+
+.header__wrapper {
+  max-width: 80vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header__wrapper .logotype {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e70011;
+  height: 100%;
+}
+
+.header__wrapper .logotype__center {
+  border: 5px solid white;
+  border-radius: 30px;
+  padding: 0 0.5em;
+  padding-top: 0.2em;
+  color: white;
+  text-align: center;
+  height: 4em;
+}
+
+.header__wrapper__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+}
+
+.header__wrapper__nav__item {
+  text-decoration: none;
+  color: white;
+  width: 8em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__wrapper__nav__item:hover {
+  color: black;
+}
+
+main {
+  max-width: 80vw;
+  margin: auto;
+  margin-top: 5em;
+  margin-bottom: 20px;
+}
+
+main .game-series-title {
+  margin: 1em 0;
+  text-align: center;
 }
 
 .card-image {
@@ -12,11 +98,18 @@
 .game-series-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   max-width: 80vw;
   margin: auto;
   gap: 2em;
+}
+
+@media (min-width: 1200px) {
+  .game-series-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .game-series-list__card {
@@ -36,11 +129,14 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  background-color: red;
-}
-
-.game-series-list__card span {
+  background-color: #e70011;
   color: white;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 9px 16px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 9px 16px -6px rgba(0, 0, 0, 0.75);
 }
 
 .game-series-list__card img {
@@ -48,5 +144,53 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  max-width: 99%;
+}
+
+.game-series-list__card:hover {
+  background: #880219;
+}
+
+.details {
+  max-width: 80vw;
+  margin: 2em auto;
+}
+
+.details__container {
+  padding: 2em 0;
+  max-width: 70vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e70011;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 9px 16px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 9px 16px -6px rgba(0, 0, 0, 0.75);
+}
+
+.details__container img {
+  display: block;
+  max-height: 20em;
+}
+
+.details__container__content h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.details__container__content table {
+  text-align: left;
+  width: 20em;
 }
 /*# sourceMappingURL=style.css.map */
